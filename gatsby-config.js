@@ -37,7 +37,7 @@ module.exports = {
       options: {
         typeName: 'WPGraphQL',
         fieldName: 'wpgraphql',
-        url: 'http://localhost/easysouls/graphql',
+        url: 'https://easysouls.netlify.app/graphql',
         // Add this option to disable introspection queries
         // and prevent the error you're seeing
       },
