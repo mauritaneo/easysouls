@@ -3,15 +3,10 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import "@wordpress/block-library/build-style/style.css"
 import "../styles/layout.css"
 
-const Layout = ({ children }) => {
+const Layout = () => {
   const data = useStaticQuery(graphql`
   query {
     wpgraphql {
-      generalSettings {
-        title
-        url
-      }
-      
       menu(id: "dGVybToz") {
         menuItems {
           nodes {
@@ -25,7 +20,7 @@ const Layout = ({ children }) => {
   }
 `)
 
-const { title, url } = data.wpgraphql.generalSettings
+const { url } = data.wpgraphql.menu.menuItems.nodes // Forse va preso da generalSettings
 
 // Loop through the menu items and make the links relative
 const items = data.wpgraphql.menu.menuItems.nodes.map(item => ({
@@ -36,16 +31,12 @@ const items = data.wpgraphql.menu.menuItems.nodes.map(item => ({
   return (
     <>
       <header>
-        <Link to="/" className="home">
-          {title}
-        </Link>
         {items.map(item => (
           <Link key={item.id} to={item.url}>
             {item.label}                  
           </Link>
         ))}
       </header>
-      <main>{children}</main>
     </>
   )
 }

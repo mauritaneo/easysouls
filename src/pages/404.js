@@ -1,24 +1,12 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 import Header from "../components/header"
 import Aside from "../components/aside"
 import Footer from "../components/footer"
 
 
-export const query = graphql`
-  query($id: ID!) {
-    wpgraphql {
-      post(id: $id) {
-        title
-        content
-      }
-    }
-  }
-
-`
-
-const PostTemplate = ({ data }) => {
-  const post = data.wpgraphql.post
+const Error404 = () => {
   const { items, bannerimage, render: RenderHeader } = Header();
 
   return (
@@ -41,11 +29,18 @@ const PostTemplate = ({ data }) => {
               ))}
             </ul>
           </nav>
-          
+              
           <main id="index" className="content">
             <article>
-              <h1 className= "pagetitle" dangerouslySetInnerHTML={{ __html: post.title }} />
-              <div dangerouslySetInnerHTML={{ __html: post.content }} />
+                <h1 className="error404">Error 404</h1>
+                <div className="error404">
+                    <StaticImage id="errorimage" alt="Error 404, a stylized warrior looking at the camera" src="../images/404img.png" />
+                </div>
+                <p className="error404">No content found.
+                </p>
+                <Link className="homelink" to="/">
+                    <StaticImage id="homebutton" alt="Home button" src="../images/home.png" />
+                </Link>
             </article>
           </main>
           <Aside />
@@ -56,4 +51,4 @@ const PostTemplate = ({ data }) => {
   )
 }
 
-export default PostTemplate
+export default Error404

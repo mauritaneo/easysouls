@@ -37,7 +37,7 @@ module.exports = {
       options: {
         typeName: 'WPGraphQL',
         fieldName: 'wpgraphql',
-        url: 'https://e6db-82-61-220-104.ngrok-free.app/easysouls/graphql',
+        url: 'http://localhost/easysouls/graphql',
         // Add this option to disable introspection queries
         // and prevent the error you're seeing
       },

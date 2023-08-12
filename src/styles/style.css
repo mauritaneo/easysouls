@@ -1,0 +1,482 @@
+@font-face {
+    font-family: "darksouls";
+    src: url("../fonts/OptimusPrincepsSemiBold.ttf");
+}
+
+@font-face {
+    font-family: "playfair";
+    src: url("../fonts/PlayfairDisplay-VariableFont_wght.ttf");
+}
+
+body {
+	font-family: playfair;
+	letter-spacing: 0.05em;
+	line-height: 1.5em;
+	font-size: calc(12px + .5vw);
+	color: #FFFFFF;
+	background-color: #12303A;
+}
+
+/* Smartphone view */
+
+@media screen and (max-width: 653px) {
+	body {
+		font-size: calc(16px + .5vw);
+	}
+	
+	aside div.aside-content a p span {
+		margin: 0;
+		padding-top: 0.25em;
+		font-size: calc(18px + 1vw);
+	}
+}
+
+
+
+.banner {
+	grid-area: banner;
+}
+
+header a img {
+	width: 100%;
+	height: auto;
+}
+
+.menu {
+	grid-area: menu;
+}
+
+nav ul li {
+	display: inline-block;
+	margin: 1.3% 5% 1.3% 5%;
+}
+
+
+a {
+	font-family: darksouls;
+	font-size: calc(16px + .8vw);
+	letter-spacing: normal;
+	background: linear-gradient(to top, #fadf50, #aa5729);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+    font-weight: 600;
+	text-decoration: none;
+	filter: drop-shadow(0.05em 0.05em black);
+	display: inline-block
+}
+
+#wpadminbar a {
+	-webkit-text-fill-color: unset;
+}
+
+.content {
+	grid-area: content;
+}
+
+main article {
+	padding: 0 3em;
+}
+
+h1.pagetitle {
+	font-family: darksouls;
+	font-size: calc(1em + 2.5vw);
+	line-height: 1em;
+	font-weight: bold;
+	text-align: center;
+	margin: 1vw auto;
+}
+
+h1.error404 {
+	font-family: darksouls;
+	font-size: calc(1em + 2.5vw);
+	line-height: 1em;
+	font-weight: bold;
+	text-align: center;
+	margin: 1vw auto;
+}
+
+h1 {
+	font-family: darksouls;
+	font-size: calc(1em + 2.5vw);
+	line-height: 1em;
+	font-weight: bold;
+	margin: 1vw auto;
+}
+
+:root {
+  --h1-font-size: calc(1em + 2.5vw);
+  --h2-font-size: calc(var(--h1-font-size) * 0.8);
+  --h3-font-size: calc(var(--h1-font-size) * 0.6);
+  --h4-font-size: calc(var(--h1-font-size) * 0.5);
+  --h5-font-size: calc(var(--h1-font-size) * 0.4);
+  --h6-font-size: calc(var(--h1-font-size) * 0.3);
+}
+
+h2 {
+	font-family: darksouls;
+	font-size: var(--h2-font-size);
+	line-height: 1em;
+	font-weight: bold;
+	margin: 1vw auto;
+}
+	
+h3 {
+	font-family: darksouls;
+	font-size: var(--h3-font-size);
+	line-height: 1em;
+	font-weight: bold;
+	margin: 1vw auto;
+}
+
+h4 {
+	font-family: darksouls;
+	font-size: var(--h4-font-size);
+	line-height: 1em;
+	font-weight: bold;
+	margin: 1vw auto;
+}
+
+h5 {
+	font-family: darksouls;
+	font-size: var(--h5-font-size);
+	line-height: 1em;
+	font-weight: bold;
+	margin: 1vw auto;
+}
+
+h6 {
+	font-family: darksouls;
+	font-size: var(--h6-font-size);
+	line-height: 1em;
+	font-weight: bold;
+	margin: 1vw auto;
+}
+
+main article p {
+	font-family: playfair;
+	font-size: calc(9px + 1vw);
+	margin: 2vw auto 3vw auto;
+}
+
+
+
+h1.error404 {
+	margin: 1vw 0 2vw 0;
+}
+
+div.error404 {
+	display: flex;
+	width: 100%;
+	height: auto;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+}
+
+div.error404 > div:nth-child(1) > div:nth-child(1) > img:nth-child(1) {
+	width: 20em;
+	height: auto;
+	justify-content: center;
+}
+
+#errorimage {
+	display: flex;
+	width: 20em;
+	height: auto;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+}
+
+.error404 + p {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 0 0 2vw 0;
+}
+
+main article a.homelink {
+	display: flex;
+	justify-content: center;
+	padding: 2vw 0;
+}
+
+.homelink > div:nth-child(1) {
+	display: flex;
+	width: 10em;
+	height: auto;
+	justify-content: center;
+}
+
+a.pagehomelink {
+	display: flex;
+	width: 100%;
+	height: auto;
+	justify-content: center;
+}
+
+.gatsby-image-wrapper > div:nth-child(2) {
+	width: 10em;
+	height: auto;
+	justify-content: center;
+}
+
+.gatsby-image-wrapper > div:nth-child(1) > img:nth-child(1) {
+	width: 10em;
+	height: auto;
+	justify-content: center;
+}
+
+#homebutton {
+	width: 10em;
+	height: auto;
+	justify-content: center;
+}
+
+a.more-link {
+	display: flex;
+	justify-content: center;
+	font-size: calc(16px + 1vw);
+	margin-bottom: 4vw;
+}
+	
+
+div.pagination-links {
+	display: flex;
+	justify-content: center;
+	font-size: calc(16px + 1vw);
+	
+}
+
+a.page-numbers {
+	margin: 0 0.5em;
+}
+
+span.page-numbers.dots {
+	margin: 0 0.5em;
+	padding-top: 0.1vw;
+    font-family: darksouls;
+	font-size: calc(16px + .8vw);
+	letter-spacing: normal;
+	background: linear-gradient(to top, #fadf50, #aa5729);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+    font-weight: 600;
+	text-decoration: none;
+	filter: drop-shadow(0.05em 0.05em black);
+}
+
+span.page-numbers.current {
+	margin: 0 0.5em;
+	font-size: calc(16px + 0.6vw);
+	font-family: darksouls;
+	letter-spacing: normal;
+	background: linear-gradient(to top, #abb8c3, #8ed1fc);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+    font-weight: 600;
+	text-decoration: none;
+	filter: drop-shadow(0.05em 0.05em black);
+}
+	
+.sidebar {
+	grid-area: sidebar;
+	padding: 2em;
+}
+
+aside h1 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: darksouls;
+	font-size: calc(1em + 2.5vw);
+	letter-spacing: normal;
+	background: linear-gradient(to top, #fadf50, #aa5729);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+    font-weight: 600;
+	text-decoration: none;
+	filter: drop-shadow(0.05em 0.05em black);
+	text-align: center;
+	margin-top: 1vw;
+	height: 1em;
+	width: auto;
+}
+
+	/* Safari */
+
+@supports (display: -webkit-box) {
+	aside h1 {
+		display: -webkit-box;
+		-webkit-box-align: center;
+		-webkit-box-pack: center;
+		font-family: darksouls;
+		font-size: calc(1em + 2.5vw);
+		letter-spacing: normal;
+		background: linear-gradient(to top, #fadf50, #aa5729);
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-weight: 600;
+		text-decoration: none;
+		filter: drop-shadow(0.05em 0.05em black);
+		text-align: center;
+		margin-top: 1vw;
+		height: 1em;
+		width: auto;
+	}
+}
+
+aside div.aside-content {
+	display: -webkit-box;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	margin-top: 1em;
+}
+
+aside div.aside-content a p {
+	display: -webkit-box;
+	display: flex;
+	flex-direction: column;
+	margin: 2.5em auto;
+	align-items: center;
+	font-size: calc(9px + 1vw);
+}
+
+aside div.aside-content a p img {
+	width: 40%;
+	height: auto;
+}
+
+aside div.aside-content a p span {
+	margin: 0;
+	padding-top: 0.25em;
+	font-size: calc(12px + 1vw);
+}
+
+	/* Safari */
+
+@supports (-webkit-text-fill-color: transparent) {
+	@media not all and (min-resolution:.001dpcm) {
+		aside div.aside-content a p span {
+			-webkit-text-fill-color: transparent;
+			font-family: darksouls;
+			font-size: calc(16px + .8vw);
+			letter-spacing: normal;
+			background: linear-gradient(to top, #fadf50, #aa5729);
+			-webkit-background-clip: text;
+			background-clip: text;
+			font-weight: 600;
+			text-decoration: none;
+			filter: drop-shadow(0.05em 0.05em black);
+		}
+	}
+}
+
+	/* Smartphone view */
+
+@media screen and (max-width: 728px) {
+	
+	.sidebar {
+		grid-area: sidebar;
+		padding: 0.5em;
+	}
+	
+	div.site {
+		display: grid;
+		grid-template-columns: 4fr 1fr;
+		grid-template-rows: auto auto auto auto 12em;
+		grid-template-areas:
+		"banner banner"
+		"menu menu"
+		"sidebar sidebar"
+		"content content"
+		"footer footer";
+		gap: 0.25% 1%;
+		margin: 0 1% auto 1%;
+	}
+	
+	aside div.aside-content {
+		display: -webkit-box;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		text-align: center;
+		justify-content: center;
+		margin-top: 0.3em;
+	}
+	
+	aside div.aside-content a p {
+		margin: 0.7em 1.5em;
+	}
+	
+	aside div.aside-content a p img {
+		height: 2.3em;
+		width: auto;
+	}
+}
+  
+
+
+.footer {
+	grid-area: footer;
+	align-self: start;
+	width: 100%;
+	height: 10vh;
+	
+}
+
+.footer-widgets {
+	justify-self: center;
+	width: 100%;
+	height: auto;
+}
+
+.footer-widget {
+    display: flex;
+	justify-content: center;
+	width: 100%;
+	height: auto;
+}
+
+.footer-widget div {
+	justify-content: center;
+	width: 100%;
+	height: auto;
+}
+
+.footer-widget p {
+	margin: 0;
+}
+
+
+	/* Smartphone view */	
+	
+@media screen and (max-width: 824px) {
+
+
+	.footer-widget p {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		flex-grow: unset;
+		font-size: calc(16px + 0.5vw)
+	}
+	
+	.footer-widget p a {
+		font-size: calc(20px + 0.5vw);
+	}
+	
+
+	:where(.wp-block-columns.is-layout-flex) {
+		gap: 0;
+	}
+	
+	
+}
