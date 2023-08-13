@@ -22,7 +22,7 @@ const PostTemplate = ({ data }) => {
   const { items, bannerimage, render: RenderHeader } = Header()
 
   // Get the base URL of the site
-  const baseUrl = window.location.origin
+  const baseUrl = typeof window !== 'undefined' ? window.location.origin : '';
 
   // Function to replace the image URLs in the post content
   const replaceImageUrls = (content) => {

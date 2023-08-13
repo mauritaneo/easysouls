@@ -5,7 +5,7 @@ import "../styles/reset.css"
 import "../styles/style.css"
 
 export const ThemeImage = ({ imageUrl }) => {
-  const imageUrlRelative = imageUrl.replace('../images/', `${window.location.origin}/images/`)
+  const imageUrlRelative = imageUrl.replace('../images/', `${process.env.PUBLIC_URL}/images/`)
   return <img className="banner" src={imageUrlRelative} alt="" />
 }
 

@@ -65,7 +65,7 @@ const Aside = () => {
   ].filter((entry) => entry.image || entry.text);
 
   // Get the base URL of the site
-  const baseUrl = window.location.origin
+  const baseUrl = typeof window !== 'undefined' ? window.location.origin : '';
 
   return (
     <aside className="sidebar">
