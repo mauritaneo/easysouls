@@ -13,8 +13,6 @@ module.exports = {
     siteUrl: 'https://easysouls.netlify.app/'
   },
 
-  assetPrefix: '__GATSBY_RELATIVE_PATH__',
-
   plugins: [
     {
       resolve: "gatsby-source-filesystem",
