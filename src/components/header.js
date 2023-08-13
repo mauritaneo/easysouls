@@ -4,6 +4,11 @@ import "@wordpress/block-library/build-style/style.css"
 import "../styles/reset.css"
 import "../styles/style.css"
 
+export const ThemeImage = ({ imageUrl }) => {
+  const imageUrlRelative = imageUrl.replace('../images/', `${window.location.origin}/images/`)
+  return <img className="banner" src={imageUrlRelative} alt="" />
+}
+
 function Header() {
 
   const data = useStaticQuery(graphql`
@@ -234,7 +239,6 @@ function Header() {
           `}
         </style>
       </head>
-    
     </>
     ),
   };

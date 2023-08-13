@@ -8,35 +8,35 @@ const Aside = () => {
         generalSettings {
           sidebarname
           asideentry1: asideentries(index: 0) {
-            image
             text
             class
             link
           }
           asideentry2: asideentries(index: 1) {
-            image
             text
             class
             link
           }
           asideentry3: asideentries(index: 2) {
-            image
             text
             class
             link
           }
           asideentry4: asideentries(index: 3) {
-            image
             text
             class
             link
           }
           asideentry5: asideentries(index: 4) {
-            image
             text
             class
             link
           }
+          asideEntryImageData1: asideEntryImageData(index: 0)
+          asideEntryImageData2: asideEntryImageData(index: 1)
+          asideEntryImageData3: asideEntryImageData(index: 2)
+          asideEntryImageData4: asideEntryImageData(index: 3)
+          asideEntryImageData5: asideEntryImageData(index: 4)
         }
       }
     }
@@ -49,15 +49,23 @@ const Aside = () => {
     asideentry3,
     asideentry4,
     asideentry5,
+    asideEntryImageData1,
+    asideEntryImageData2,
+    asideEntryImageData3,
+    asideEntryImageData4,
+    asideEntryImageData5,
   } = data.wpgraphql.generalSettings;
 
   const asideEntries = [
-    asideentry1,
-    asideentry2,
-    asideentry3,
-    asideentry4,
-    asideentry5,
+    { ...asideentry1, image: asideEntryImageData1 },
+    { ...asideentry2, image: asideEntryImageData2 },
+    { ...asideentry3, image: asideEntryImageData3 },
+    { ...asideentry4, image: asideEntryImageData4 },
+    { ...asideentry5, image: asideEntryImageData5 },
   ].filter((entry) => entry.image || entry.text);
+
+  // Get the base URL of the site
+  const baseUrl = window.location.origin
 
   return (
     <aside className="sidebar">
@@ -68,8 +76,8 @@ const Aside = () => {
             <p className={entry.class}>
               {entry.image && (
                 <img
-                  src={entry.image}
-                  alt={entry.image.alt || 'Image'}
+                  src={baseUrl + '/' + entry.image}
+                  alt=""
                 />
               )}
               {entry.text && <span>{entry.text}</span>}
