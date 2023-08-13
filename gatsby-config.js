@@ -10,7 +10,7 @@
 module.exports = {
   siteMetadata: {
     title: "Easy Souls",
-    siteUrl: 'https://easysouls.netlify.com/'
+    siteUrl: 'https://easysouls.netlify.app/'
   },
 
   assetPrefix: '__GATSBY_RELATIVE_PATH__',
