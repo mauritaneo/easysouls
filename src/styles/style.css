@@ -1,11 +1,11 @@
 @font-face {
     font-family: "darksouls";
-    src: url("../fonts/OptimusPrincepsSemiBold.ttf");
+    src: url("../static/fonts/OptimusPrincepsSemiBold.ttf");
 }
 
 @font-face {
     font-family: "playfair";
-    src: url("../fonts/PlayfairDisplay-VariableFont_wght.ttf");
+    src: url("../static/fonts/PlayfairDisplay-VariableFont_wght.ttf");
 }
 
 body {
