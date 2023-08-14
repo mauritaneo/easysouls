@@ -4,7 +4,7 @@ import Header from "../components/header"
 import Aside from "../components/aside"
 import Footer from "../components/footer"
 import { StaticImage } from "gatsby-plugin-image"
-
+import EasyNews from "../components/easy-news"
 
 
 export const query = graphql`
