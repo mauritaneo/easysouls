@@ -22,6 +22,7 @@ export const query = graphql`
 const PageTemplate = ({ data }) => {
   const page = data.wpgraphql.page
   const { items, bannerimage, render: RenderHeader } = Header();
+  const hasEasyNews = /<div id="root">|<EasyNews \/>/.test(page.content);
 
   return (
     <html lang="en">
@@ -48,6 +49,7 @@ const PageTemplate = ({ data }) => {
             <article>
               <h1 className="pagetitle" dangerouslySetInnerHTML={{ __html: page.title }} />
               <div dangerouslySetInnerHTML={{ __html: page.content }} />
+              <EasyNews show={hasEasyNews} />
             </article>
             <Link className="pagehomelink" to="/">
               <StaticImage id="homebutton" alt="Home button" src="../images/home.png" />
