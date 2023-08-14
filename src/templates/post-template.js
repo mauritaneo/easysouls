@@ -19,16 +19,18 @@ export const query = graphql`
 
 const PostTemplate = ({ data }) => {
   const post = data.wpgraphql.post
-  const { items, bannerimage, render: RenderHeader } = Header()
+  const { items, render: RenderHeader } = Header()
+  
 
-  // Get the base URL of the site
-  const baseUrl = typeof window !== 'undefined' ? window.location.origin : '';
+  const baseUrl = process.env.URL || '';
 
   // Function to replace the image URLs in the post content
   const replaceImageUrls = (content) => {
     const regex = /http:\/\/localhost\/easysouls\/wp-content\/uploads\/\d{4}\/\d{2}\//g
     return content.replace(regex, `${baseUrl}/images/`)
   }
+  
+  const bannerimage = `${baseUrl}/images/banner.jpg`;
 
   return (
     <html lang="en">
