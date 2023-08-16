@@ -4,7 +4,7 @@ const EasyNews = ({ show }) => {
     useEffect(() => {
       if (show) {
         const script = document.createElement('script');
-        script.src = 'https://easy-news-pdyt1ko1r-mauritaneo.vercel.app/bundle.js';
+        script.src = 'https://easy-news-asjzow319-mauritaneo.vercel.app/bundle.js';
         script.async = true;
         document.head.appendChild(script);
       }
