@@ -228,10 +228,6 @@ function Header() {
                 font-size: calc(1.2em + 1.5vw);
               }
 
-              div.pagination-links a {
-                font-size: calc(1em + 1vw);
-              }
-
               a.page-numbers {
                 margin: 0 0.2em;
               }

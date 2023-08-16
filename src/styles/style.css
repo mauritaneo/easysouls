@@ -1,6 +1,6 @@
-@font-face {
-    font-family: "darksouls";
-    src: url("/fonts/OptimusPrincepsSemiBold.ttf");
+@font-face { 
+	font-family: 'darksouls';
+	src: local(''), url('/fonts/OptimusPrinceps.woff') format('woff');
 }
 
 @font-face {
@@ -210,28 +210,35 @@ main article a.homelink {
 
 a.pagehomelink {
 	display: flex;
-	width: 100%;
+	width: auto;
+	height: auto;
+	justify-content: center;
+	padding-top: 2em;
+}
+
+.gatsby-image-wrapper > div:nth-child(1) > img:nth-child(1) {
+	display: flex;
+	width: 8em;
 	height: auto;
 	justify-content: center;
 }
 
 .gatsby-image-wrapper > div:nth-child(2) {
-	width: 10em;
+	display: flex;
+	width: 8em;
 	height: auto;
 	justify-content: center;
 }
 
-.gatsby-image-wrapper > div:nth-child(1) > img:nth-child(1) {
-	width: 10em;
+
+.gatsby-image-wrapper > picture:nth-child(3) > img:nth-child(2) {
+	display: flex;
+	width: 8em;
 	height: auto;
 	justify-content: center;
 }
 
-#homebutton {
-	width: 10em;
-	height: auto;
-	justify-content: center;
-}
+
 
 a.more-link {
 	display: flex;
@@ -280,6 +287,29 @@ span.page-numbers.current {
     font-weight: 600;
 	text-decoration: none;
 	filter: drop-shadow(0.05em 0.05em black);
+}
+
+main article a.page-numbers {
+	font-size: calc(16px + 0.8vw);
+}
+
+
+@media screen and (max-width: 391px) {
+	a.prev.page-numbers {
+		font-size: calc(20px + 0.4vw);
+	}
+
+	main article a.page-numbers {
+		font-size: calc(20px + 0.6vw);
+	}
+
+	a.next.page-numbers {
+		font-size: calc(20px + 0.4vw);
+	}
+
+	a.more-link {
+		font-size: calc(20px + 0.4vw);
+	}
 }
 	
 .sidebar {

@@ -52,7 +52,7 @@ const PageTemplate = ({ data }) => {
               <EasyNews show={hasEasyNews} />
             </article>
             <Link className="pagehomelink" to="/">
-              <StaticImage id="homebutton" alt="Home button" src="../images/home.png" />
+              <StaticImage alt="Home button" src="../images/home.png" />
             </Link>
           </main>
           <Aside />
