@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react";
 import { graphql, Link } from "gatsby"
 import Header from "../components/header"
 import Aside from "../components/aside"
@@ -23,11 +23,28 @@ const PageTemplate = ({ data }) => {
   const page = data.wpgraphql.page
   const { items, bannerimage, render: RenderHeader } = Header();
   const hasEasyNews = /<div id="root">|<EasyNews \/>/.test(page.content);
+  const [isLoading, setIsLoading] = useState(true); // Add isLoading state
+
+  const baseUrl = process.env.URL || '';
+
+  // Function to replace the image URLs in the pages content
+  const replaceImageUrls = (content) => {
+    const regex = /http:\/\/localhost\/easysouls\/wp-content\/uploads\/\d{4}\/\d{2}\//g
+    return content.replace(regex, `${baseUrl}/images/`)
+  }
+
+  useEffect(() => {
+    // Set isLoading to false after component has mounted
+    setIsLoading(false);
+  }, []);
 
   return (
     <html lang="en">
       <RenderHeader />
       <body>
+      {isLoading ? ( // Render loading spinner or message if isLoading is true
+          <div>Loading...</div>
+        ) : (
         <div className="site">
           <header className="banner">
             <Link to="/">
@@ -48,7 +65,9 @@ const PageTemplate = ({ data }) => {
           <main id="index" className="content">
             <article>
               <h1 className="pagetitle" dangerouslySetInnerHTML={{ __html: page.title }} />
-              <div dangerouslySetInnerHTML={{ __html: page.content }} />
+              {page.content && (
+                <div dangerouslySetInnerHTML={{ __html: replaceImageUrls(page.content) }} />
+              )}
               <EasyNews show={hasEasyNews} />
             </article>
             <Link className="pagehomelink" to="/">
@@ -58,6 +77,7 @@ const PageTemplate = ({ data }) => {
           <Aside />
           <Footer />
         </div>
+        )}
       </body>
     </html>
   )

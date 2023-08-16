@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react";
 import { graphql, Link } from "gatsby"
 import { ThemeImage } from "../components/header"
 import Header from "../components/header"
@@ -20,6 +20,7 @@ export const query = graphql`
 const PostTemplate = ({ data }) => {
   const post = data.wpgraphql.post
   const { items, render: RenderHeader } = Header()
+  const [isLoading, setIsLoading] = useState(true); // Add isLoading state
   
 
   const baseUrl = process.env.URL || '';
@@ -32,10 +33,18 @@ const PostTemplate = ({ data }) => {
   
   const bannerimage = `${baseUrl}/images/banner.jpg`;
 
+  useEffect(() => {
+    // Set isLoading to false after component has mounted
+    setIsLoading(false);
+  }, []);
+
   return (
     <html lang="en">
       <RenderHeader />
       <body>
+      {isLoading ? ( // Render loading spinner or message if isLoading is true
+          <div>Loading...</div>
+        ) : (
         <div className="site">
           <header className="banner">
             <Link to="/">
@@ -65,6 +74,7 @@ const PostTemplate = ({ data }) => {
           <Aside />
           <Footer />
         </div>
+      )}
       </body>
     </html>
   )

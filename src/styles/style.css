@@ -203,7 +203,7 @@ main article a.homelink {
 
 .homelink > div:nth-child(1) {
 	display: flex;
-	width: 10em;
+	width: 8em;
 	height: auto;
 	justify-content: center;
 }
@@ -214,6 +214,13 @@ a.pagehomelink {
 	height: auto;
 	justify-content: center;
 	padding-top: 2em;
+}
+
+.homelink > div:nth-child(1) > img:nth-child(1) {
+	display: flex;
+	width: 8em;
+	height: auto;
+	justify-content: center;
 }
 
 .gatsby-image-wrapper > div:nth-child(1) > img:nth-child(1) {

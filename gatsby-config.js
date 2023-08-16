@@ -63,7 +63,7 @@ module.exports = {
       options: {
         typeName: 'WPGraphQL',
         fieldName: 'wpgraphql',
-        url: 'https://1631-87-10-76-215.ngrok-free.app/easysouls/graphql',
+        url: 'https://4820-87-10-76-215.ngrok-free.app/easysouls/graphql',
       },
     },
     {

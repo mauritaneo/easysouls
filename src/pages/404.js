@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react";
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import Header from "../components/header"
@@ -8,11 +8,21 @@ import Footer from "../components/footer"
 
 const Error404 = () => {
   const { items, bannerimage, render: RenderHeader } = Header();
+  const [isLoading, setIsLoading] = useState(true); // Add isLoading state
+
+  useEffect(() => {
+    // Set isLoading to false after component has mounted
+    setIsLoading(false);
+  }, []);
+
 
   return (
     <html lang="en">
       <RenderHeader />
       <body>
+      {isLoading ? ( // Render loading spinner or message if isLoading is true
+          <div>Loading...</div>
+        ) : (
         <div className="site">
           <header className="banner">
             <Link to="/">
@@ -46,6 +56,7 @@ const Error404 = () => {
           <Aside />
           <Footer />
         </div>
+        )}
       </body>
     </html>
   )
