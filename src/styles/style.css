@@ -292,25 +292,6 @@ span.page-numbers.current {
 main article a.page-numbers {
 	font-size: calc(16px + 0.8vw);
 }
-
-
-@media screen and (max-width: 391px) {
-	a.prev.page-numbers {
-		font-size: calc(20px + 0.4vw);
-	}
-
-	main article a.page-numbers {
-		font-size: calc(20px + 0.6vw);
-	}
-
-	a.next.page-numbers {
-		font-size: calc(20px + 0.4vw);
-	}
-
-	a.more-link {
-		font-size: calc(20px + 0.4vw);
-	}
-}
 	
 .sidebar {
 	grid-area: sidebar;
