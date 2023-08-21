@@ -10,7 +10,10 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "download-images": "wget -r -np -nH --cut-dirs=3 -P tmp --accept jpg,jpeg,png,gif http://localhost/easysouls/wp-content/uploads/",
+    "copy-images": "find tmp -type f \\( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.gif' \\) -exec cp -r {} /c/xampp/htdocs/easysouls/wordpress-jamstack/static/images\\ ; && rm -rf tmp",
+    "dlcopy-images": "npm run download-images && npm run copy-images"
   },
   "dependencies": {
     "@wordpress/block-library": "^8.15.0",
