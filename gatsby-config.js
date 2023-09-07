@@ -1,3 +1,4 @@
+const imageName = bannerimage.substring(bannerimage.lastIndexOf("/") + 1, bannerimage.lastIndexOf("."));
 /**
  * Configure your Gatsby site with this file.
  *
@@ -63,7 +64,7 @@ module.exports = {
       options: {
         typeName: 'WPGraphQL',
         fieldName: 'wpgraphql',
-        url: 'http://localhost/easysouls/graphql',
+        url: 'https://cf22-79-51-127-55.ngrok-free.app/easysouls/graphql',
       },
     },
     {
