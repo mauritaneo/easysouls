@@ -77,7 +77,7 @@ const Aside = () => {
               {entry.image && (
                 <img
                   src={baseUrl + '/' + entry.image}
-                  alt=""
+                  alt="Social media icon"
                 />
               )}
               {entry.text && <span>{entry.text}</span>}
