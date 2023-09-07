@@ -6,7 +6,7 @@ import "../styles/style.css"
 
 export const ThemeImage = ({ imageUrl }) => {
   const imageUrlRelative = imageUrl.replace('../images/', `${process.env.PUBLIC_URL}/images/`)
-  return <img className="banner" src={imageUrlRelative} alt="" />
+  return <img className="banner" src={imageUrlRelative} alt="Easy Soul's banner: a mysterious warrior with an helm" />
 }
 
 function Header() {

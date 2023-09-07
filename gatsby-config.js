@@ -1,4 +1,3 @@
-const imageName = bannerimage.substring(bannerimage.lastIndexOf("/") + 1, bannerimage.lastIndexOf("."));
 /**
  * Configure your Gatsby site with this file.
  *

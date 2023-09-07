@@ -57,7 +57,7 @@ const Blog = ({ data }) => {
           <div className="site">
             <header className="banner">
               <Link to="/">
-                <img src={bannerimage} alt="Easy Soul's banner: a misterious warrior with an helm" />
+                <img src={bannerimage} alt="Easy Soul's banner: a mysterious warrior with an helm" />
               </Link>
             </header>
 

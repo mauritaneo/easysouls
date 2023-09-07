@@ -48,7 +48,7 @@ const PageTemplate = ({ data }) => {
         <div className="site">
           <header className="banner">
             <Link to="/">
-              <img src={bannerimage} alt="" />
+              <img src={bannerimage} alt="Easy Soul's banner: a mysterious warrior with an helm" />
             </Link>
           </header>
 
