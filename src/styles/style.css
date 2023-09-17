@@ -223,6 +223,10 @@ a.pagehomelink {
 	justify-content: center;
 }
 
+.homelink > div:first-child, a.pagehomelink {
+	clear: both;
+}
+
 .gatsby-image-wrapper > div:nth-child(1) > img:nth-child(1) {
 	display: flex;
 	width: 8em;
