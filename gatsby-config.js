@@ -32,6 +32,7 @@ module.exports = {
     },
 
     'gatsby-plugin-sitemap',
+    `gatsby-plugin-smoothscroll`,
 
     {
       resolve: 'gatsby-plugin-root-import',
@@ -63,7 +64,7 @@ module.exports = {
       options: {
         typeName: 'WPGraphQL',
         fieldName: 'wpgraphql',
-        url: 'https://cf22-79-51-127-55.ngrok-free.app/easysouls/graphql',
+        url: 'https://3f45-79-27-245-70.ngrok-free.app/easysouls/graphql',
       },
     },
     {

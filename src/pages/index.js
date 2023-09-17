@@ -41,6 +41,7 @@ const Blog = ({ data }) => {
   const startIndex = (currentPage - 1) * postsPerPage;
   const endIndex = startIndex + postsPerPage;
   const paginatedPosts = posts.slice(startIndex, endIndex);
+  
 
   useEffect(() => {
     // Set isLoading to false after component has mounted
@@ -65,7 +66,7 @@ const Blog = ({ data }) => {
               <ul id="primary-menu" className="menu-class">
                 {items.map((item) => (
                   <li key={item.id}>
-                    <Link to={`${item.url}`}>{item.label}</Link>
+                    <Link to={`${item.url}#index`}>{item.label}</Link>
                   </li>
                 ))}
               </ul>
@@ -78,13 +79,13 @@ const Blog = ({ data }) => {
                     dangerouslySetInnerHTML={{ __html: post.title }}
                   />
                   <div dangerouslySetInnerHTML={{ __html: post.excerpt }} />
-                  <Link
-                    className="more-link"
-                    to={`/blog/${post.uri}#index`}
+                  <a
+                  className="more-link"
+                  href={`/blog${post.uri}#index`}
                   >
                     more...
-                  </Link>
-                </article>
+                  </a>
+                  </article>
               ))}
               <Pagination
                 totalPages={totalPages}

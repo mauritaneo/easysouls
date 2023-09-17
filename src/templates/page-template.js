@@ -56,7 +56,7 @@ const PageTemplate = ({ data }) => {
             <ul id="primary-menu" className="menu-class">
               {items.map((item) => (
                 <li key={item.id}>
-                  <Link to={`${item.url}`}>{item.label}</Link>
+                  <Link to={`${item.url}#index`}>{item.label}</Link>
                 </li>
               ))}
             </ul>

@@ -334,6 +334,48 @@ main article a.page-numbers {
 	}
 
 }
+
+@media screen and (max-width: 393px) {
+	div.wp-block-columns {
+		display: block;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	div.wp-block-columns figure {
+		margin: 0 auto;
+	}
+
+	div.wp-block-columns img {
+		display: block;
+		margin: 0 auto;
+	}
+
+	div.wp-block-image figure {
+		display: block;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	div.wp-block-image figure img {
+		display: block;
+		margin: 0 auto;
+	}
+
+	.wp-block-image .alignleft {
+		display: block;
+		float: unset;
+	}
+
+	figure.alignleft.size-full.is-resizerd {
+		margin: 0 auto;
+	}
+
+	.wp-image-53 {
+		width: auto !important;
+		height: auto !important;
+	}
+}
 	
 .sidebar {
 	grid-area: sidebar;
