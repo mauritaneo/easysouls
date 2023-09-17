@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { graphql, Link } from "gatsby"
 import { ThemeImage } from "../components/header"
 import Header from "../components/header"
@@ -23,15 +23,16 @@ const PostTemplate = ({ data }) => {
   const [isLoading, setIsLoading] = useState(true); // Add isLoading state
   
 
-  const baseUrl = process.env.URL || '';
+  const baseUrl = process.env.URL || '/';
 
   // Function to replace the image URLs in the post content
   const replaceImageUrls = (content) => {
-    const regex = /http:\/\/localhost\/easysouls\/wp-content\/uploads\/\d{4}\/\d{2}\//g
-    return content.replace(regex, `${baseUrl}/images/`)
-  }
-  
-  const bannerimage = `${baseUrl}/images/banner.jpg`;
+    const bannerImagePath = '/images/banner.jpg';
+    const regex = new RegExp(`http:\/\/localhost\/easysouls\/wp-content\/uploads\/\\d{4}\/\\d{2}\/(?!${bannerImagePath})`, 'g');
+    return content.replace(regex, `${baseUrl}images/`);
+  };
+
+  const bannerimage = "/images/banner.jpg"
 
   useEffect(() => {
     // Set isLoading to false after component has mounted

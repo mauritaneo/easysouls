@@ -5,8 +5,14 @@ import "../styles/reset.css"
 import "../styles/style.css"
 
 export const ThemeImage = ({ imageUrl }) => {
-  const imageUrlRelative = imageUrl.replace('/images/', `${process.env.PUBLIC_URL}/images/`)
-  return <img className="banner" src={imageUrlRelative} alt="Easy Soul's banner: a mysterious warrior with an helm" />
+  let imageUrlRelative = imageUrl;
+
+  // Check if the image URL does not contain "/images/" to determine if it should be modified
+  if (!imageUrl.includes('/images/')) {
+    imageUrlRelative = imageUrl.replace('/images/', `${process.env.PUBLIC_URL}/images/`);
+  }
+
+  return <img className="banner" src={imageUrlRelative} alt="Easy Soul's banner: a mysterious warrior with a helm" />
 }
 
 function Header() {
