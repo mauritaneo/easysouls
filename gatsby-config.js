@@ -33,6 +33,7 @@ module.exports = {
 
     'gatsby-plugin-sitemap',
     `gatsby-plugin-smoothscroll`,
+    'gatsby-plugin-netlify',
 
     {
       resolve: 'gatsby-plugin-root-import',
@@ -70,19 +71,16 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
-        // ...
       },
     },
     {
       resolve: `gatsby-transformer-sharp`,
       options: {
-        // ...
       },
     },
     {
       resolve: `gatsby-plugin-image`,
       options: {
-        // ...
       },
     },
   ],

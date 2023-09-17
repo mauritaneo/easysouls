@@ -335,6 +335,8 @@ main article a.page-numbers {
 
 }
 
+	/* Smartphone View */
+
 @media screen and (max-width: 393px) {
 	div.wp-block-columns {
 		display: block;
@@ -373,6 +375,12 @@ main article a.page-numbers {
 
 	.wp-image-53 {
 		width: auto !important;
+		height: auto !important;
+	}
+
+	#errorimage {
+		margin: 0 auto;
+		width: 100% !important;
 		height: auto !important;
 	}
 }
